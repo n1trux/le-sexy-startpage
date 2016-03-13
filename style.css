@@ -1,33 +1,2162 @@
-html {
-  box-sizing: border-box; }
+@charset "UTF-8";
+/*!
+ *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("fonts/fontawesome-webfont.eot?v=4.5.0");
+  src: url("fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
-*, *::after, *::before {
-  box-sizing: inherit; }
+/* makes the font 33% larger relative to the icon container */
+.fa-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -15%; }
+
+.fa-2x {
+  font-size: 2em; }
+
+.fa-3x {
+  font-size: 3em; }
+
+.fa-4x {
+  font-size: 4em; }
+
+.fa-5x {
+  font-size: 5em; }
+
+.fa-fw {
+  width: 1.28571em;
+  text-align: center; }
+
+.fa-ul {
+  padding-left: 0;
+  margin-left: 2.14286em;
+  list-style-type: none; }
+  .fa-ul > li {
+    position: relative; }
+
+.fa-li {
+  position: absolute;
+  left: -2.14286em;
+  width: 2.14286em;
+  top: 0.14286em;
+  text-align: center; }
+  .fa-li.fa-lg {
+    left: -1.85714em; }
+
+.fa-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eee;
+  border-radius: .1em; }
+
+.fa-pull-left {
+  float: left; }
+
+.fa-pull-right {
+  float: right; }
+
+.fa.fa-pull-left {
+  margin-right: .3em; }
+.fa.fa-pull-right {
+  margin-left: .3em; }
+
+/* Deprecated as of 4.4.0 */
+.pull-right {
+  float: right; }
+
+.pull-left {
+  float: left; }
+
+.fa.pull-left {
+  margin-right: .3em; }
+.fa.pull-right {
+  margin-left: .3em; }
+
+/*
+@import "animated";
+@import "rotated-flipped";
+*/
+.fa-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle; }
+
+.fa-stack-1x, .fa-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center; }
+
+.fa-stack-1x {
+  line-height: inherit; }
+
+.fa-stack-2x {
+  font-size: 2em; }
+
+.fa-inverse {
+  color: #fff; }
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+.fa-glass:before {
+  content: ""; }
+
+.fa-music:before {
+  content: ""; }
+
+.fa-search:before {
+  content: ""; }
+
+.fa-envelope-o:before {
+  content: ""; }
+
+.fa-heart:before {
+  content: ""; }
+
+.fa-star:before {
+  content: ""; }
+
+.fa-star-o:before {
+  content: ""; }
+
+.fa-user:before {
+  content: ""; }
+
+.fa-film:before {
+  content: ""; }
+
+.fa-th-large:before {
+  content: ""; }
+
+.fa-th:before {
+  content: ""; }
+
+.fa-th-list:before {
+  content: ""; }
+
+.fa-check:before {
+  content: ""; }
+
+.fa-remove:before,
+.fa-close:before,
+.fa-times:before {
+  content: ""; }
+
+.fa-search-plus:before {
+  content: ""; }
+
+.fa-search-minus:before {
+  content: ""; }
+
+.fa-power-off:before {
+  content: ""; }
+
+.fa-signal:before {
+  content: ""; }
+
+.fa-gear:before,
+.fa-cog:before {
+  content: ""; }
+
+.fa-trash-o:before {
+  content: ""; }
+
+.fa-home:before {
+  content: ""; }
+
+.fa-file-o:before {
+  content: ""; }
+
+.fa-clock-o:before {
+  content: ""; }
+
+.fa-road:before {
+  content: ""; }
+
+.fa-download:before {
+  content: ""; }
+
+.fa-arrow-circle-o-down:before {
+  content: ""; }
+
+.fa-arrow-circle-o-up:before {
+  content: ""; }
+
+.fa-inbox:before {
+  content: ""; }
+
+.fa-play-circle-o:before {
+  content: ""; }
+
+.fa-rotate-right:before,
+.fa-repeat:before {
+  content: ""; }
+
+.fa-refresh:before {
+  content: ""; }
+
+.fa-list-alt:before {
+  content: ""; }
+
+.fa-lock:before {
+  content: ""; }
+
+.fa-flag:before {
+  content: ""; }
+
+.fa-headphones:before {
+  content: ""; }
+
+.fa-volume-off:before {
+  content: ""; }
+
+.fa-volume-down:before {
+  content: ""; }
+
+.fa-volume-up:before {
+  content: ""; }
+
+.fa-qrcode:before {
+  content: ""; }
+
+.fa-barcode:before {
+  content: ""; }
+
+.fa-tag:before {
+  content: ""; }
+
+.fa-tags:before {
+  content: ""; }
+
+.fa-book:before {
+  content: ""; }
+
+.fa-bookmark:before {
+  content: ""; }
+
+.fa-print:before {
+  content: ""; }
+
+.fa-camera:before {
+  content: ""; }
+
+.fa-font:before {
+  content: ""; }
+
+.fa-bold:before {
+  content: ""; }
+
+.fa-italic:before {
+  content: ""; }
+
+.fa-text-height:before {
+  content: ""; }
+
+.fa-text-width:before {
+  content: ""; }
+
+.fa-align-left:before {
+  content: ""; }
+
+.fa-align-center:before {
+  content: ""; }
+
+.fa-align-right:before {
+  content: ""; }
+
+.fa-align-justify:before {
+  content: ""; }
+
+.fa-list:before {
+  content: ""; }
+
+.fa-dedent:before,
+.fa-outdent:before {
+  content: ""; }
+
+.fa-indent:before {
+  content: ""; }
+
+.fa-video-camera:before {
+  content: ""; }
+
+.fa-photo:before,
+.fa-image:before,
+.fa-picture-o:before {
+  content: ""; }
+
+.fa-pencil:before {
+  content: ""; }
+
+.fa-map-marker:before {
+  content: ""; }
+
+.fa-adjust:before {
+  content: ""; }
+
+.fa-tint:before {
+  content: ""; }
+
+.fa-edit:before,
+.fa-pencil-square-o:before {
+  content: ""; }
+
+.fa-share-square-o:before {
+  content: ""; }
+
+.fa-check-square-o:before {
+  content: ""; }
+
+.fa-arrows:before {
+  content: ""; }
+
+.fa-step-backward:before {
+  content: ""; }
+
+.fa-fast-backward:before {
+  content: ""; }
+
+.fa-backward:before {
+  content: ""; }
+
+.fa-play:before {
+  content: ""; }
+
+.fa-pause:before {
+  content: ""; }
+
+.fa-stop:before {
+  content: ""; }
+
+.fa-forward:before {
+  content: ""; }
+
+.fa-fast-forward:before {
+  content: ""; }
+
+.fa-step-forward:before {
+  content: ""; }
+
+.fa-eject:before {
+  content: ""; }
+
+.fa-chevron-left:before {
+  content: ""; }
+
+.fa-chevron-right:before {
+  content: ""; }
+
+.fa-plus-circle:before {
+  content: ""; }
+
+.fa-minus-circle:before {
+  content: ""; }
+
+.fa-times-circle:before {
+  content: ""; }
+
+.fa-check-circle:before {
+  content: ""; }
+
+.fa-question-circle:before {
+  content: ""; }
+
+.fa-info-circle:before {
+  content: ""; }
+
+.fa-crosshairs:before {
+  content: ""; }
+
+.fa-times-circle-o:before {
+  content: ""; }
+
+.fa-check-circle-o:before {
+  content: ""; }
+
+.fa-ban:before {
+  content: ""; }
+
+.fa-arrow-left:before {
+  content: ""; }
+
+.fa-arrow-right:before {
+  content: ""; }
+
+.fa-arrow-up:before {
+  content: ""; }
+
+.fa-arrow-down:before {
+  content: ""; }
+
+.fa-mail-forward:before,
+.fa-share:before {
+  content: ""; }
+
+.fa-expand:before {
+  content: ""; }
+
+.fa-compress:before {
+  content: ""; }
+
+.fa-plus:before {
+  content: ""; }
+
+.fa-minus:before {
+  content: ""; }
+
+.fa-asterisk:before {
+  content: ""; }
+
+.fa-exclamation-circle:before {
+  content: ""; }
+
+.fa-gift:before {
+  content: ""; }
+
+.fa-leaf:before {
+  content: ""; }
+
+.fa-fire:before {
+  content: ""; }
+
+.fa-eye:before {
+  content: ""; }
+
+.fa-eye-slash:before {
+  content: ""; }
+
+.fa-warning:before,
+.fa-exclamation-triangle:before {
+  content: ""; }
+
+.fa-plane:before {
+  content: ""; }
+
+.fa-calendar:before {
+  content: ""; }
+
+.fa-random:before {
+  content: ""; }
+
+.fa-comment:before {
+  content: ""; }
+
+.fa-magnet:before {
+  content: ""; }
+
+.fa-chevron-up:before {
+  content: ""; }
+
+.fa-chevron-down:before {
+  content: ""; }
+
+.fa-retweet:before {
+  content: ""; }
+
+.fa-shopping-cart:before {
+  content: ""; }
+
+.fa-folder:before {
+  content: ""; }
+
+.fa-folder-open:before {
+  content: ""; }
+
+.fa-arrows-v:before {
+  content: ""; }
+
+.fa-arrows-h:before {
+  content: ""; }
+
+.fa-bar-chart-o:before,
+.fa-bar-chart:before {
+  content: ""; }
+
+.fa-twitter-square:before {
+  content: ""; }
+
+.fa-facebook-square:before {
+  content: ""; }
+
+.fa-camera-retro:before {
+  content: ""; }
+
+.fa-key:before {
+  content: ""; }
+
+.fa-gears:before,
+.fa-cogs:before {
+  content: ""; }
+
+.fa-comments:before {
+  content: ""; }
+
+.fa-thumbs-o-up:before {
+  content: ""; }
+
+.fa-thumbs-o-down:before {
+  content: ""; }
+
+.fa-star-half:before {
+  content: ""; }
+
+.fa-heart-o:before {
+  content: ""; }
+
+.fa-sign-out:before {
+  content: ""; }
+
+.fa-linkedin-square:before {
+  content: ""; }
+
+.fa-thumb-tack:before {
+  content: ""; }
+
+.fa-external-link:before {
+  content: ""; }
+
+.fa-sign-in:before {
+  content: ""; }
+
+.fa-trophy:before {
+  content: ""; }
+
+.fa-github-square:before {
+  content: ""; }
+
+.fa-upload:before {
+  content: ""; }
+
+.fa-lemon-o:before {
+  content: ""; }
+
+.fa-phone:before {
+  content: ""; }
+
+.fa-square-o:before {
+  content: ""; }
+
+.fa-bookmark-o:before {
+  content: ""; }
+
+.fa-phone-square:before {
+  content: ""; }
+
+.fa-twitter:before {
+  content: ""; }
+
+.fa-facebook-f:before,
+.fa-facebook:before {
+  content: ""; }
+
+.fa-github:before {
+  content: ""; }
+
+.fa-unlock:before {
+  content: ""; }
+
+.fa-credit-card:before {
+  content: ""; }
+
+.fa-feed:before,
+.fa-rss:before {
+  content: ""; }
+
+.fa-hdd-o:before {
+  content: ""; }
+
+.fa-bullhorn:before {
+  content: ""; }
+
+.fa-bell:before {
+  content: ""; }
+
+.fa-certificate:before {
+  content: ""; }
+
+.fa-hand-o-right:before {
+  content: ""; }
+
+.fa-hand-o-left:before {
+  content: ""; }
+
+.fa-hand-o-up:before {
+  content: ""; }
+
+.fa-hand-o-down:before {
+  content: ""; }
+
+.fa-arrow-circle-left:before {
+  content: ""; }
+
+.fa-arrow-circle-right:before {
+  content: ""; }
+
+.fa-arrow-circle-up:before {
+  content: ""; }
+
+.fa-arrow-circle-down:before {
+  content: ""; }
+
+.fa-globe:before {
+  content: ""; }
+
+.fa-wrench:before {
+  content: ""; }
+
+.fa-tasks:before {
+  content: ""; }
+
+.fa-filter:before {
+  content: ""; }
+
+.fa-briefcase:before {
+  content: ""; }
+
+.fa-arrows-alt:before {
+  content: ""; }
+
+.fa-group:before,
+.fa-users:before {
+  content: ""; }
+
+.fa-chain:before,
+.fa-link:before {
+  content: ""; }
+
+.fa-cloud:before {
+  content: ""; }
+
+.fa-flask:before {
+  content: ""; }
+
+.fa-cut:before,
+.fa-scissors:before {
+  content: ""; }
+
+.fa-copy:before,
+.fa-files-o:before {
+  content: ""; }
+
+.fa-paperclip:before {
+  content: ""; }
+
+.fa-save:before,
+.fa-floppy-o:before {
+  content: ""; }
+
+.fa-square:before {
+  content: ""; }
+
+.fa-navicon:before,
+.fa-reorder:before,
+.fa-bars:before {
+  content: ""; }
+
+.fa-list-ul:before {
+  content: ""; }
+
+.fa-list-ol:before {
+  content: ""; }
+
+.fa-strikethrough:before {
+  content: ""; }
+
+.fa-underline:before {
+  content: ""; }
+
+.fa-table:before {
+  content: ""; }
+
+.fa-magic:before {
+  content: ""; }
+
+.fa-truck:before {
+  content: ""; }
+
+.fa-pinterest:before {
+  content: ""; }
+
+.fa-pinterest-square:before {
+  content: ""; }
+
+.fa-google-plus-square:before {
+  content: ""; }
+
+.fa-google-plus:before {
+  content: ""; }
+
+.fa-money:before {
+  content: ""; }
+
+.fa-caret-down:before {
+  content: ""; }
+
+.fa-caret-up:before {
+  content: ""; }
+
+.fa-caret-left:before {
+  content: ""; }
+
+.fa-caret-right:before {
+  content: ""; }
+
+.fa-columns:before {
+  content: ""; }
+
+.fa-unsorted:before,
+.fa-sort:before {
+  content: ""; }
+
+.fa-sort-down:before,
+.fa-sort-desc:before {
+  content: ""; }
+
+.fa-sort-up:before,
+.fa-sort-asc:before {
+  content: ""; }
+
+.fa-envelope:before {
+  content: ""; }
+
+.fa-linkedin:before {
+  content: ""; }
+
+.fa-rotate-left:before,
+.fa-undo:before {
+  content: ""; }
+
+.fa-legal:before,
+.fa-gavel:before {
+  content: ""; }
+
+.fa-dashboard:before,
+.fa-tachometer:before {
+  content: ""; }
+
+.fa-comment-o:before {
+  content: ""; }
+
+.fa-comments-o:before {
+  content: ""; }
+
+.fa-flash:before,
+.fa-bolt:before {
+  content: ""; }
+
+.fa-sitemap:before {
+  content: ""; }
+
+.fa-umbrella:before {
+  content: ""; }
+
+.fa-paste:before,
+.fa-clipboard:before {
+  content: ""; }
+
+.fa-lightbulb-o:before {
+  content: ""; }
+
+.fa-exchange:before {
+  content: ""; }
+
+.fa-cloud-download:before {
+  content: ""; }
+
+.fa-cloud-upload:before {
+  content: ""; }
+
+.fa-user-md:before {
+  content: ""; }
+
+.fa-stethoscope:before {
+  content: ""; }
+
+.fa-suitcase:before {
+  content: ""; }
+
+.fa-bell-o:before {
+  content: ""; }
+
+.fa-coffee:before {
+  content: ""; }
+
+.fa-cutlery:before {
+  content: ""; }
+
+.fa-file-text-o:before {
+  content: ""; }
+
+.fa-building-o:before {
+  content: ""; }
+
+.fa-hospital-o:before {
+  content: ""; }
+
+.fa-ambulance:before {
+  content: ""; }
+
+.fa-medkit:before {
+  content: ""; }
+
+.fa-fighter-jet:before {
+  content: ""; }
+
+.fa-beer:before {
+  content: ""; }
+
+.fa-h-square:before {
+  content: ""; }
+
+.fa-plus-square:before {
+  content: ""; }
+
+.fa-angle-double-left:before {
+  content: ""; }
+
+.fa-angle-double-right:before {
+  content: ""; }
+
+.fa-angle-double-up:before {
+  content: ""; }
+
+.fa-angle-double-down:before {
+  content: ""; }
+
+.fa-angle-left:before {
+  content: ""; }
+
+.fa-angle-right:before {
+  content: ""; }
+
+.fa-angle-up:before {
+  content: ""; }
+
+.fa-angle-down:before {
+  content: ""; }
+
+.fa-desktop:before {
+  content: ""; }
+
+.fa-laptop:before {
+  content: ""; }
+
+.fa-tablet:before {
+  content: ""; }
+
+.fa-mobile-phone:before,
+.fa-mobile:before {
+  content: ""; }
+
+.fa-circle-o:before {
+  content: ""; }
+
+.fa-quote-left:before {
+  content: ""; }
+
+.fa-quote-right:before {
+  content: ""; }
+
+.fa-spinner:before {
+  content: ""; }
+
+.fa-circle:before {
+  content: ""; }
+
+.fa-mail-reply:before,
+.fa-reply:before {
+  content: ""; }
+
+.fa-github-alt:before {
+  content: ""; }
+
+.fa-folder-o:before {
+  content: ""; }
+
+.fa-folder-open-o:before {
+  content: ""; }
+
+.fa-smile-o:before {
+  content: ""; }
+
+.fa-frown-o:before {
+  content: ""; }
+
+.fa-meh-o:before {
+  content: ""; }
+
+.fa-gamepad:before {
+  content: ""; }
+
+.fa-keyboard-o:before {
+  content: ""; }
+
+.fa-flag-o:before {
+  content: ""; }
+
+.fa-flag-checkered:before {
+  content: ""; }
+
+.fa-terminal:before {
+  content: ""; }
+
+.fa-code:before {
+  content: ""; }
+
+.fa-mail-reply-all:before,
+.fa-reply-all:before {
+  content: ""; }
+
+.fa-star-half-empty:before,
+.fa-star-half-full:before,
+.fa-star-half-o:before {
+  content: ""; }
+
+.fa-location-arrow:before {
+  content: ""; }
+
+.fa-crop:before {
+  content: ""; }
+
+.fa-code-fork:before {
+  content: ""; }
+
+.fa-unlink:before,
+.fa-chain-broken:before {
+  content: ""; }
+
+.fa-question:before {
+  content: ""; }
+
+.fa-info:before {
+  content: ""; }
+
+.fa-exclamation:before {
+  content: ""; }
+
+.fa-superscript:before {
+  content: ""; }
+
+.fa-subscript:before {
+  content: ""; }
+
+.fa-eraser:before {
+  content: ""; }
+
+.fa-puzzle-piece:before {
+  content: ""; }
+
+.fa-microphone:before {
+  content: ""; }
+
+.fa-microphone-slash:before {
+  content: ""; }
+
+.fa-shield:before {
+  content: ""; }
+
+.fa-calendar-o:before {
+  content: ""; }
+
+.fa-fire-extinguisher:before {
+  content: ""; }
+
+.fa-rocket:before {
+  content: ""; }
+
+.fa-maxcdn:before {
+  content: ""; }
+
+.fa-chevron-circle-left:before {
+  content: ""; }
+
+.fa-chevron-circle-right:before {
+  content: ""; }
+
+.fa-chevron-circle-up:before {
+  content: ""; }
+
+.fa-chevron-circle-down:before {
+  content: ""; }
+
+.fa-html5:before {
+  content: ""; }
+
+.fa-css3:before {
+  content: ""; }
+
+.fa-anchor:before {
+  content: ""; }
+
+.fa-unlock-alt:before {
+  content: ""; }
+
+.fa-bullseye:before {
+  content: ""; }
+
+.fa-ellipsis-h:before {
+  content: ""; }
+
+.fa-ellipsis-v:before {
+  content: ""; }
+
+.fa-rss-square:before {
+  content: ""; }
+
+.fa-play-circle:before {
+  content: ""; }
+
+.fa-ticket:before {
+  content: ""; }
+
+.fa-minus-square:before {
+  content: ""; }
+
+.fa-minus-square-o:before {
+  content: ""; }
+
+.fa-level-up:before {
+  content: ""; }
+
+.fa-level-down:before {
+  content: ""; }
+
+.fa-check-square:before {
+  content: ""; }
+
+.fa-pencil-square:before {
+  content: ""; }
+
+.fa-external-link-square:before {
+  content: ""; }
+
+.fa-share-square:before {
+  content: ""; }
+
+.fa-compass:before {
+  content: ""; }
+
+.fa-toggle-down:before,
+.fa-caret-square-o-down:before {
+  content: ""; }
+
+.fa-toggle-up:before,
+.fa-caret-square-o-up:before {
+  content: ""; }
+
+.fa-toggle-right:before,
+.fa-caret-square-o-right:before {
+  content: ""; }
+
+.fa-euro:before,
+.fa-eur:before {
+  content: ""; }
+
+.fa-gbp:before {
+  content: ""; }
+
+.fa-dollar:before,
+.fa-usd:before {
+  content: ""; }
+
+.fa-rupee:before,
+.fa-inr:before {
+  content: ""; }
+
+.fa-cny:before,
+.fa-rmb:before,
+.fa-yen:before,
+.fa-jpy:before {
+  content: ""; }
+
+.fa-ruble:before,
+.fa-rouble:before,
+.fa-rub:before {
+  content: ""; }
+
+.fa-won:before,
+.fa-krw:before {
+  content: ""; }
+
+.fa-bitcoin:before,
+.fa-btc:before {
+  content: ""; }
+
+.fa-file:before {
+  content: ""; }
+
+.fa-file-text:before {
+  content: ""; }
+
+.fa-sort-alpha-asc:before {
+  content: ""; }
+
+.fa-sort-alpha-desc:before {
+  content: ""; }
+
+.fa-sort-amount-asc:before {
+  content: ""; }
+
+.fa-sort-amount-desc:before {
+  content: ""; }
+
+.fa-sort-numeric-asc:before {
+  content: ""; }
+
+.fa-sort-numeric-desc:before {
+  content: ""; }
+
+.fa-thumbs-up:before {
+  content: ""; }
+
+.fa-thumbs-down:before {
+  content: ""; }
+
+.fa-youtube-square:before {
+  content: ""; }
+
+.fa-youtube:before {
+  content: ""; }
+
+.fa-xing:before {
+  content: ""; }
+
+.fa-xing-square:before {
+  content: ""; }
+
+.fa-youtube-play:before {
+  content: ""; }
+
+.fa-dropbox:before {
+  content: ""; }
+
+.fa-stack-overflow:before {
+  content: ""; }
+
+.fa-instagram:before {
+  content: ""; }
+
+.fa-flickr:before {
+  content: ""; }
+
+.fa-adn:before {
+  content: ""; }
+
+.fa-bitbucket:before {
+  content: ""; }
+
+.fa-bitbucket-square:before {
+  content: ""; }
+
+.fa-tumblr:before {
+  content: ""; }
+
+.fa-tumblr-square:before {
+  content: ""; }
+
+.fa-long-arrow-down:before {
+  content: ""; }
+
+.fa-long-arrow-up:before {
+  content: ""; }
+
+.fa-long-arrow-left:before {
+  content: ""; }
+
+.fa-long-arrow-right:before {
+  content: ""; }
+
+.fa-apple:before {
+  content: ""; }
+
+.fa-windows:before {
+  content: ""; }
+
+.fa-android:before {
+  content: ""; }
+
+.fa-linux:before {
+  content: ""; }
+
+.fa-dribbble:before {
+  content: ""; }
+
+.fa-skype:before {
+  content: ""; }
+
+.fa-foursquare:before {
+  content: ""; }
+
+.fa-trello:before {
+  content: ""; }
+
+.fa-female:before {
+  content: ""; }
+
+.fa-male:before {
+  content: ""; }
+
+.fa-gittip:before,
+.fa-gratipay:before {
+  content: ""; }
+
+.fa-sun-o:before {
+  content: ""; }
+
+.fa-moon-o:before {
+  content: ""; }
+
+.fa-archive:before {
+  content: ""; }
+
+.fa-bug:before {
+  content: ""; }
+
+.fa-vk:before {
+  content: ""; }
+
+.fa-weibo:before {
+  content: ""; }
+
+.fa-renren:before {
+  content: ""; }
+
+.fa-pagelines:before {
+  content: ""; }
+
+.fa-stack-exchange:before {
+  content: ""; }
+
+.fa-arrow-circle-o-right:before {
+  content: ""; }
+
+.fa-arrow-circle-o-left:before {
+  content: ""; }
+
+.fa-toggle-left:before,
+.fa-caret-square-o-left:before {
+  content: ""; }
+
+.fa-dot-circle-o:before {
+  content: ""; }
+
+.fa-wheelchair:before {
+  content: ""; }
+
+.fa-vimeo-square:before {
+  content: ""; }
+
+.fa-turkish-lira:before,
+.fa-try:before {
+  content: ""; }
+
+.fa-plus-square-o:before {
+  content: ""; }
+
+.fa-space-shuttle:before {
+  content: ""; }
+
+.fa-slack:before {
+  content: ""; }
+
+.fa-envelope-square:before {
+  content: ""; }
+
+.fa-wordpress:before {
+  content: ""; }
+
+.fa-openid:before {
+  content: ""; }
+
+.fa-institution:before,
+.fa-bank:before,
+.fa-university:before {
+  content: ""; }
+
+.fa-mortar-board:before,
+.fa-graduation-cap:before {
+  content: ""; }
+
+.fa-yahoo:before {
+  content: ""; }
+
+.fa-google:before {
+  content: ""; }
+
+.fa-reddit:before {
+  content: ""; }
+
+.fa-reddit-square:before {
+  content: ""; }
+
+.fa-stumbleupon-circle:before {
+  content: ""; }
+
+.fa-stumbleupon:before {
+  content: ""; }
+
+.fa-delicious:before {
+  content: ""; }
+
+.fa-digg:before {
+  content: ""; }
+
+.fa-pied-piper:before {
+  content: ""; }
+
+.fa-pied-piper-alt:before {
+  content: ""; }
+
+.fa-drupal:before {
+  content: ""; }
+
+.fa-joomla:before {
+  content: ""; }
+
+.fa-language:before {
+  content: ""; }
+
+.fa-fax:before {
+  content: ""; }
+
+.fa-building:before {
+  content: ""; }
+
+.fa-child:before {
+  content: ""; }
+
+.fa-paw:before {
+  content: ""; }
+
+.fa-spoon:before {
+  content: ""; }
+
+.fa-cube:before {
+  content: ""; }
+
+.fa-cubes:before {
+  content: ""; }
+
+.fa-behance:before {
+  content: ""; }
+
+.fa-behance-square:before {
+  content: ""; }
+
+.fa-steam:before {
+  content: ""; }
+
+.fa-steam-square:before {
+  content: ""; }
+
+.fa-recycle:before {
+  content: ""; }
+
+.fa-automobile:before,
+.fa-car:before {
+  content: ""; }
+
+.fa-cab:before,
+.fa-taxi:before {
+  content: ""; }
+
+.fa-tree:before {
+  content: ""; }
+
+.fa-spotify:before {
+  content: ""; }
+
+.fa-deviantart:before {
+  content: ""; }
+
+.fa-soundcloud:before {
+  content: ""; }
+
+.fa-database:before {
+  content: ""; }
+
+.fa-file-pdf-o:before {
+  content: ""; }
+
+.fa-file-word-o:before {
+  content: ""; }
+
+.fa-file-excel-o:before {
+  content: ""; }
+
+.fa-file-powerpoint-o:before {
+  content: ""; }
+
+.fa-file-photo-o:before,
+.fa-file-picture-o:before,
+.fa-file-image-o:before {
+  content: ""; }
+
+.fa-file-zip-o:before,
+.fa-file-archive-o:before {
+  content: ""; }
+
+.fa-file-sound-o:before,
+.fa-file-audio-o:before {
+  content: ""; }
+
+.fa-file-movie-o:before,
+.fa-file-video-o:before {
+  content: ""; }
+
+.fa-file-code-o:before {
+  content: ""; }
+
+.fa-vine:before {
+  content: ""; }
+
+.fa-codepen:before {
+  content: ""; }
+
+.fa-jsfiddle:before {
+  content: ""; }
+
+.fa-life-bouy:before,
+.fa-life-buoy:before,
+.fa-life-saver:before,
+.fa-support:before,
+.fa-life-ring:before {
+  content: ""; }
+
+.fa-circle-o-notch:before {
+  content: ""; }
+
+.fa-ra:before,
+.fa-rebel:before {
+  content: ""; }
+
+.fa-ge:before,
+.fa-empire:before {
+  content: ""; }
+
+.fa-git-square:before {
+  content: ""; }
+
+.fa-git:before {
+  content: ""; }
+
+.fa-y-combinator-square:before,
+.fa-yc-square:before,
+.fa-hacker-news:before {
+  content: ""; }
+
+.fa-tencent-weibo:before {
+  content: ""; }
+
+.fa-qq:before {
+  content: ""; }
+
+.fa-wechat:before,
+.fa-weixin:before {
+  content: ""; }
+
+.fa-send:before,
+.fa-paper-plane:before {
+  content: ""; }
+
+.fa-send-o:before,
+.fa-paper-plane-o:before {
+  content: ""; }
+
+.fa-history:before {
+  content: ""; }
+
+.fa-circle-thin:before {
+  content: ""; }
+
+.fa-header:before {
+  content: ""; }
+
+.fa-paragraph:before {
+  content: ""; }
+
+.fa-sliders:before {
+  content: ""; }
+
+.fa-share-alt:before {
+  content: ""; }
+
+.fa-share-alt-square:before {
+  content: ""; }
+
+.fa-bomb:before {
+  content: ""; }
+
+.fa-soccer-ball-o:before,
+.fa-futbol-o:before {
+  content: ""; }
+
+.fa-tty:before {
+  content: ""; }
+
+.fa-binoculars:before {
+  content: ""; }
+
+.fa-plug:before {
+  content: ""; }
+
+.fa-slideshare:before {
+  content: ""; }
+
+.fa-twitch:before {
+  content: ""; }
+
+.fa-yelp:before {
+  content: ""; }
+
+.fa-newspaper-o:before {
+  content: ""; }
+
+.fa-wifi:before {
+  content: ""; }
+
+.fa-calculator:before {
+  content: ""; }
+
+.fa-paypal:before {
+  content: ""; }
+
+.fa-google-wallet:before {
+  content: ""; }
+
+.fa-cc-visa:before {
+  content: ""; }
+
+.fa-cc-mastercard:before {
+  content: ""; }
+
+.fa-cc-discover:before {
+  content: ""; }
+
+.fa-cc-amex:before {
+  content: ""; }
+
+.fa-cc-paypal:before {
+  content: ""; }
+
+.fa-cc-stripe:before {
+  content: ""; }
+
+.fa-bell-slash:before {
+  content: ""; }
+
+.fa-bell-slash-o:before {
+  content: ""; }
+
+.fa-trash:before {
+  content: ""; }
+
+.fa-copyright:before {
+  content: ""; }
+
+.fa-at:before {
+  content: ""; }
+
+.fa-eyedropper:before {
+  content: ""; }
+
+.fa-paint-brush:before {
+  content: ""; }
+
+.fa-birthday-cake:before {
+  content: ""; }
+
+.fa-area-chart:before {
+  content: ""; }
+
+.fa-pie-chart:before {
+  content: ""; }
+
+.fa-line-chart:before {
+  content: ""; }
+
+.fa-lastfm:before {
+  content: ""; }
+
+.fa-lastfm-square:before {
+  content: ""; }
+
+.fa-toggle-off:before {
+  content: ""; }
+
+.fa-toggle-on:before {
+  content: ""; }
+
+.fa-bicycle:before {
+  content: ""; }
+
+.fa-bus:before {
+  content: ""; }
+
+.fa-ioxhost:before {
+  content: ""; }
+
+.fa-angellist:before {
+  content: ""; }
+
+.fa-cc:before {
+  content: ""; }
+
+.fa-shekel:before,
+.fa-sheqel:before,
+.fa-ils:before {
+  content: ""; }
+
+.fa-meanpath:before {
+  content: ""; }
+
+.fa-buysellads:before {
+  content: ""; }
+
+.fa-connectdevelop:before {
+  content: ""; }
+
+.fa-dashcube:before {
+  content: ""; }
+
+.fa-forumbee:before {
+  content: ""; }
+
+.fa-leanpub:before {
+  content: ""; }
+
+.fa-sellsy:before {
+  content: ""; }
+
+.fa-shirtsinbulk:before {
+  content: ""; }
+
+.fa-simplybuilt:before {
+  content: ""; }
+
+.fa-skyatlas:before {
+  content: ""; }
+
+.fa-cart-plus:before {
+  content: ""; }
+
+.fa-cart-arrow-down:before {
+  content: ""; }
+
+.fa-diamond:before {
+  content: ""; }
+
+.fa-ship:before {
+  content: ""; }
+
+.fa-user-secret:before {
+  content: ""; }
+
+.fa-motorcycle:before {
+  content: ""; }
+
+.fa-street-view:before {
+  content: ""; }
+
+.fa-heartbeat:before {
+  content: ""; }
+
+.fa-venus:before {
+  content: ""; }
+
+.fa-mars:before {
+  content: ""; }
+
+.fa-mercury:before {
+  content: ""; }
+
+.fa-intersex:before,
+.fa-transgender:before {
+  content: ""; }
+
+.fa-transgender-alt:before {
+  content: ""; }
+
+.fa-venus-double:before {
+  content: ""; }
+
+.fa-mars-double:before {
+  content: ""; }
+
+.fa-venus-mars:before {
+  content: ""; }
+
+.fa-mars-stroke:before {
+  content: ""; }
+
+.fa-mars-stroke-v:before {
+  content: ""; }
+
+.fa-mars-stroke-h:before {
+  content: ""; }
+
+.fa-neuter:before {
+  content: ""; }
+
+.fa-genderless:before {
+  content: ""; }
+
+.fa-facebook-official:before {
+  content: ""; }
+
+.fa-pinterest-p:before {
+  content: ""; }
+
+.fa-whatsapp:before {
+  content: ""; }
+
+.fa-server:before {
+  content: ""; }
+
+.fa-user-plus:before {
+  content: ""; }
+
+.fa-user-times:before {
+  content: ""; }
+
+.fa-hotel:before,
+.fa-bed:before {
+  content: ""; }
+
+.fa-viacoin:before {
+  content: ""; }
+
+.fa-train:before {
+  content: ""; }
+
+.fa-subway:before {
+  content: ""; }
+
+.fa-medium:before {
+  content: ""; }
+
+.fa-yc:before,
+.fa-y-combinator:before {
+  content: ""; }
+
+.fa-optin-monster:before {
+  content: ""; }
+
+.fa-opencart:before {
+  content: ""; }
+
+.fa-expeditedssl:before {
+  content: ""; }
+
+.fa-battery-4:before,
+.fa-battery-full:before {
+  content: ""; }
+
+.fa-battery-3:before,
+.fa-battery-three-quarters:before {
+  content: ""; }
+
+.fa-battery-2:before,
+.fa-battery-half:before {
+  content: ""; }
+
+.fa-battery-1:before,
+.fa-battery-quarter:before {
+  content: ""; }
+
+.fa-battery-0:before,
+.fa-battery-empty:before {
+  content: ""; }
+
+.fa-mouse-pointer:before {
+  content: ""; }
+
+.fa-i-cursor:before {
+  content: ""; }
+
+.fa-object-group:before {
+  content: ""; }
+
+.fa-object-ungroup:before {
+  content: ""; }
+
+.fa-sticky-note:before {
+  content: ""; }
+
+.fa-sticky-note-o:before {
+  content: ""; }
+
+.fa-cc-jcb:before {
+  content: ""; }
+
+.fa-cc-diners-club:before {
+  content: ""; }
+
+.fa-clone:before {
+  content: ""; }
+
+.fa-balance-scale:before {
+  content: ""; }
+
+.fa-hourglass-o:before {
+  content: ""; }
+
+.fa-hourglass-1:before,
+.fa-hourglass-start:before {
+  content: ""; }
+
+.fa-hourglass-2:before,
+.fa-hourglass-half:before {
+  content: ""; }
+
+.fa-hourglass-3:before,
+.fa-hourglass-end:before {
+  content: ""; }
+
+.fa-hourglass:before {
+  content: ""; }
+
+.fa-hand-grab-o:before,
+.fa-hand-rock-o:before {
+  content: ""; }
+
+.fa-hand-stop-o:before,
+.fa-hand-paper-o:before {
+  content: ""; }
+
+.fa-hand-scissors-o:before {
+  content: ""; }
+
+.fa-hand-lizard-o:before {
+  content: ""; }
+
+.fa-hand-spock-o:before {
+  content: ""; }
+
+.fa-hand-pointer-o:before {
+  content: ""; }
+
+.fa-hand-peace-o:before {
+  content: ""; }
+
+.fa-trademark:before {
+  content: ""; }
+
+.fa-registered:before {
+  content: ""; }
+
+.fa-creative-commons:before {
+  content: ""; }
+
+.fa-gg:before {
+  content: ""; }
+
+.fa-gg-circle:before {
+  content: ""; }
+
+.fa-tripadvisor:before {
+  content: ""; }
+
+.fa-odnoklassniki:before {
+  content: ""; }
+
+.fa-odnoklassniki-square:before {
+  content: ""; }
+
+.fa-get-pocket:before {
+  content: ""; }
+
+.fa-wikipedia-w:before {
+  content: ""; }
+
+.fa-safari:before {
+  content: ""; }
+
+.fa-chrome:before {
+  content: ""; }
+
+.fa-firefox:before {
+  content: ""; }
+
+.fa-opera:before {
+  content: ""; }
+
+.fa-internet-explorer:before {
+  content: ""; }
+
+.fa-tv:before,
+.fa-television:before {
+  content: ""; }
+
+.fa-contao:before {
+  content: ""; }
+
+.fa-500px:before {
+  content: ""; }
+
+.fa-amazon:before {
+  content: ""; }
+
+.fa-calendar-plus-o:before {
+  content: ""; }
+
+.fa-calendar-minus-o:before {
+  content: ""; }
+
+.fa-calendar-times-o:before {
+  content: ""; }
+
+.fa-calendar-check-o:before {
+  content: ""; }
+
+.fa-industry:before {
+  content: ""; }
+
+.fa-map-pin:before {
+  content: ""; }
+
+.fa-map-signs:before {
+  content: ""; }
+
+.fa-map-o:before {
+  content: ""; }
+
+.fa-map:before {
+  content: ""; }
+
+.fa-commenting:before {
+  content: ""; }
+
+.fa-commenting-o:before {
+  content: ""; }
+
+.fa-houzz:before {
+  content: ""; }
+
+.fa-vimeo:before {
+  content: ""; }
+
+.fa-black-tie:before {
+  content: ""; }
+
+.fa-fonticons:before {
+  content: ""; }
+
+.fa-reddit-alien:before {
+  content: ""; }
+
+.fa-edge:before {
+  content: ""; }
+
+.fa-credit-card-alt:before {
+  content: ""; }
+
+.fa-codiepie:before {
+  content: ""; }
+
+.fa-modx:before {
+  content: ""; }
+
+.fa-fort-awesome:before {
+  content: ""; }
+
+.fa-usb:before {
+  content: ""; }
+
+.fa-product-hunt:before {
+  content: ""; }
+
+.fa-mixcloud:before {
+  content: ""; }
+
+.fa-scribd:before {
+  content: ""; }
+
+.fa-pause-circle:before {
+  content: ""; }
+
+.fa-pause-circle-o:before {
+  content: ""; }
+
+.fa-stop-circle:before {
+  content: ""; }
+
+.fa-stop-circle-o:before {
+  content: ""; }
+
+.fa-shopping-bag:before {
+  content: ""; }
+
+.fa-shopping-basket:before {
+  content: ""; }
+
+.fa-hashtag:before {
+  content: ""; }
+
+.fa-bluetooth:before {
+  content: ""; }
+
+.fa-bluetooth-b:before {
+  content: ""; }
+
+.fa-percent:before {
+  content: ""; }
+
+/* -- Variables -- */
+/* icon color       */
+/* background color */
+/* shadow color     */
+/* bg border radius */
+/* box length       */
+/* -- icon colors --
+ * https://www.google.com/design/spec/style/color.html#color-color-palette */
+.icon-box {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  font-size: 100px;
+  line-height: 200px;
+  background-color: #00bfa5;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  -ms-border-radius: 200px;
+  border-radius: 200px;
+  /* icon colors */ }
+  .icon-box:hover {
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    transform: scale(0.95); }
+  .icon-box.facebook {
+    background-color: #3f51b5; }
+    .icon-box.facebook span {
+      text-shadow: #2f3d88 1px 1px, #2f3d88 2px 2px, #2f3d88 3px 3px, #2f3d88 4px 4px, #2f3d88 5px 5px, #2f3d88 6px 6px, #2f3d88 7px 7px, #2f3d88 8px 8px, #2f3d88 9px 9px, #2f3d88 10px 10px, #2f3d88 11px 11px, #2f3d88 12px 12px, #2f3d88 13px 13px, #2f3d88 14px 14px, #2f3d88 15px 15px, #2f3d88 16px 16px, #2f3d88 17px 17px, #2f3d88 18px 18px, #2f3d88 19px 19px, #2f3d88 20px 20px, #2f3d88 21px 21px, #2f3d88 22px 22px, #2f3d88 23px 23px, #2f3d88 24px 24px, #2f3d88 25px 25px, #2f3d88 26px 26px, #2f3d88 27px 27px, #2f3d88 28px 28px, #2f3d88 29px 29px, #2f3d88 30px 30px, #2f3d88 31px 31px, #2f3d88 32px 32px, #2f3d88 33px 33px, #2f3d88 34px 34px, #2f3d88 35px 35px, #2f3d88 36px 36px, #2f3d88 37px 37px, #2f3d88 38px 38px, #2f3d88 39px 39px, #2f3d88 40px 40px, #2f3d88 41px 41px, #2f3d88 42px 42px, #2f3d88 43px 43px, #2f3d88 44px 44px, #2f3d88 45px 45px, #2f3d88 46px 46px, #2f3d88 47px 47px, #2f3d88 48px 48px, #2f3d88 49px 49px, #2f3d88 50px 50px, #2f3d88 51px 51px, #2f3d88 52px 52px, #2f3d88 53px 53px, #2f3d88 54px 54px, #2f3d88 55px 55px, #2f3d88 56px 56px, #2f3d88 57px 57px, #2f3d88 58px 58px, #2f3d88 59px 59px, #2f3d88 60px 60px, #2f3d88 61px 61px, #2f3d88 62px 62px, #2f3d88 63px 63px, #2f3d88 64px 64px, #2f3d88 65px 65px, #2f3d88 66px 66px, #2f3d88 67px 67px, #2f3d88 68px 68px, #2f3d88 69px 69px, #2f3d88 70px 70px, #2f3d88 71px 71px, #2f3d88 72px 72px, #2f3d88 73px 73px, #2f3d88 74px 74px, #2f3d88 75px 75px, #2f3d88 76px 76px, #2f3d88 77px 77px, #2f3d88 78px 78px, #2f3d88 79px 79px, #2f3d88 80px 80px, #2f3d88 81px 81px, #2f3d88 82px 82px, #2f3d88 83px 83px, #2f3d88 84px 84px, #2f3d88 85px 85px, #2f3d88 86px 86px, #2f3d88 87px 87px, #2f3d88 88px 88px, #2f3d88 89px 89px, #2f3d88 90px 90px, #2f3d88 91px 91px, #2f3d88 92px 92px, #2f3d88 93px 93px, #2f3d88 94px 94px, #2f3d88 95px 95px, #2f3d88 96px 96px, #2f3d88 97px 97px, #2f3d88 98px 98px, #2f3d88 99px 99px, #2f3d88 100px 100px, #2f3d88 101px 101px, #2f3d88 102px 102px, #2f3d88 103px 103px, #2f3d88 104px 104px, #2f3d88 105px 105px, #2f3d88 106px 106px, #2f3d88 107px 107px, #2f3d88 108px 108px, #2f3d88 109px 109px, #2f3d88 110px 110px, #2f3d88 111px 111px, #2f3d88 112px 112px, #2f3d88 113px 113px, #2f3d88 114px 114px, #2f3d88 115px 115px, #2f3d88 116px 116px, #2f3d88 117px 117px, #2f3d88 118px 118px, #2f3d88 119px 119px, #2f3d88 120px 120px, #2f3d88 121px 121px, #2f3d88 122px 122px, #2f3d88 123px 123px, #2f3d88 124px 124px, #2f3d88 125px 125px, #2f3d88 126px 126px, #2f3d88 127px 127px, #2f3d88 128px 128px, #2f3d88 129px 129px, #2f3d88 130px 130px, #2f3d88 131px 131px, #2f3d88 132px 132px, #2f3d88 133px 133px, #2f3d88 134px 134px, #2f3d88 135px 135px, #2f3d88 136px 136px, #2f3d88 137px 137px, #2f3d88 138px 138px, #2f3d88 139px 139px, #2f3d88 140px 140px, #2f3d88 141px 141px, #2f3d88 142px 142px, #2f3d88 143px 143px, #2f3d88 144px 144px, #2f3d88 145px 145px, #2f3d88 146px 146px, #2f3d88 147px 147px, #2f3d88 148px 148px, #2f3d88 149px 149px, #2f3d88 150px 150px, #2f3d88 151px 151px, #2f3d88 152px 152px, #2f3d88 153px 153px, #2f3d88 154px 154px, #2f3d88 155px 155px, #2f3d88 156px 156px, #2f3d88 157px 157px, #2f3d88 158px 158px, #2f3d88 159px 159px, #2f3d88 160px 160px, #2f3d88 161px 161px, #2f3d88 162px 162px, #2f3d88 163px 163px, #2f3d88 164px 164px, #2f3d88 165px 165px, #2f3d88 166px 166px, #2f3d88 167px 167px, #2f3d88 168px 168px, #2f3d88 169px 169px, #2f3d88 170px 170px, #2f3d88 171px 171px, #2f3d88 172px 172px, #2f3d88 173px 173px, #2f3d88 174px 174px, #2f3d88 175px 175px, #2f3d88 176px 176px, #2f3d88 177px 177px, #2f3d88 178px 178px, #2f3d88 179px 179px, #2f3d88 180px 180px, #2f3d88 181px 181px, #2f3d88 182px 182px, #2f3d88 183px 183px, #2f3d88 184px 184px, #2f3d88 185px 185px, #2f3d88 186px 186px, #2f3d88 187px 187px, #2f3d88 188px 188px, #2f3d88 189px 189px, #2f3d88 190px 190px, #2f3d88 191px 191px, #2f3d88 192px 192px, #2f3d88 193px 193px, #2f3d88 194px 194px, #2f3d88 195px 195px, #2f3d88 196px 196px, #2f3d88 197px 197px, #2f3d88 198px 198px, #2f3d88 199px 199px, #2f3d88 200px 200px; }
+  .icon-box.github {
+    background-color: #673ab7; }
+    .icon-box.github span {
+      text-shadow: #4d2b89 1px 1px, #4d2b89 2px 2px, #4d2b89 3px 3px, #4d2b89 4px 4px, #4d2b89 5px 5px, #4d2b89 6px 6px, #4d2b89 7px 7px, #4d2b89 8px 8px, #4d2b89 9px 9px, #4d2b89 10px 10px, #4d2b89 11px 11px, #4d2b89 12px 12px, #4d2b89 13px 13px, #4d2b89 14px 14px, #4d2b89 15px 15px, #4d2b89 16px 16px, #4d2b89 17px 17px, #4d2b89 18px 18px, #4d2b89 19px 19px, #4d2b89 20px 20px, #4d2b89 21px 21px, #4d2b89 22px 22px, #4d2b89 23px 23px, #4d2b89 24px 24px, #4d2b89 25px 25px, #4d2b89 26px 26px, #4d2b89 27px 27px, #4d2b89 28px 28px, #4d2b89 29px 29px, #4d2b89 30px 30px, #4d2b89 31px 31px, #4d2b89 32px 32px, #4d2b89 33px 33px, #4d2b89 34px 34px, #4d2b89 35px 35px, #4d2b89 36px 36px, #4d2b89 37px 37px, #4d2b89 38px 38px, #4d2b89 39px 39px, #4d2b89 40px 40px, #4d2b89 41px 41px, #4d2b89 42px 42px, #4d2b89 43px 43px, #4d2b89 44px 44px, #4d2b89 45px 45px, #4d2b89 46px 46px, #4d2b89 47px 47px, #4d2b89 48px 48px, #4d2b89 49px 49px, #4d2b89 50px 50px, #4d2b89 51px 51px, #4d2b89 52px 52px, #4d2b89 53px 53px, #4d2b89 54px 54px, #4d2b89 55px 55px, #4d2b89 56px 56px, #4d2b89 57px 57px, #4d2b89 58px 58px, #4d2b89 59px 59px, #4d2b89 60px 60px, #4d2b89 61px 61px, #4d2b89 62px 62px, #4d2b89 63px 63px, #4d2b89 64px 64px, #4d2b89 65px 65px, #4d2b89 66px 66px, #4d2b89 67px 67px, #4d2b89 68px 68px, #4d2b89 69px 69px, #4d2b89 70px 70px, #4d2b89 71px 71px, #4d2b89 72px 72px, #4d2b89 73px 73px, #4d2b89 74px 74px, #4d2b89 75px 75px, #4d2b89 76px 76px, #4d2b89 77px 77px, #4d2b89 78px 78px, #4d2b89 79px 79px, #4d2b89 80px 80px, #4d2b89 81px 81px, #4d2b89 82px 82px, #4d2b89 83px 83px, #4d2b89 84px 84px, #4d2b89 85px 85px, #4d2b89 86px 86px, #4d2b89 87px 87px, #4d2b89 88px 88px, #4d2b89 89px 89px, #4d2b89 90px 90px, #4d2b89 91px 91px, #4d2b89 92px 92px, #4d2b89 93px 93px, #4d2b89 94px 94px, #4d2b89 95px 95px, #4d2b89 96px 96px, #4d2b89 97px 97px, #4d2b89 98px 98px, #4d2b89 99px 99px, #4d2b89 100px 100px, #4d2b89 101px 101px, #4d2b89 102px 102px, #4d2b89 103px 103px, #4d2b89 104px 104px, #4d2b89 105px 105px, #4d2b89 106px 106px, #4d2b89 107px 107px, #4d2b89 108px 108px, #4d2b89 109px 109px, #4d2b89 110px 110px, #4d2b89 111px 111px, #4d2b89 112px 112px, #4d2b89 113px 113px, #4d2b89 114px 114px, #4d2b89 115px 115px, #4d2b89 116px 116px, #4d2b89 117px 117px, #4d2b89 118px 118px, #4d2b89 119px 119px, #4d2b89 120px 120px, #4d2b89 121px 121px, #4d2b89 122px 122px, #4d2b89 123px 123px, #4d2b89 124px 124px, #4d2b89 125px 125px, #4d2b89 126px 126px, #4d2b89 127px 127px, #4d2b89 128px 128px, #4d2b89 129px 129px, #4d2b89 130px 130px, #4d2b89 131px 131px, #4d2b89 132px 132px, #4d2b89 133px 133px, #4d2b89 134px 134px, #4d2b89 135px 135px, #4d2b89 136px 136px, #4d2b89 137px 137px, #4d2b89 138px 138px, #4d2b89 139px 139px, #4d2b89 140px 140px, #4d2b89 141px 141px, #4d2b89 142px 142px, #4d2b89 143px 143px, #4d2b89 144px 144px, #4d2b89 145px 145px, #4d2b89 146px 146px, #4d2b89 147px 147px, #4d2b89 148px 148px, #4d2b89 149px 149px, #4d2b89 150px 150px, #4d2b89 151px 151px, #4d2b89 152px 152px, #4d2b89 153px 153px, #4d2b89 154px 154px, #4d2b89 155px 155px, #4d2b89 156px 156px, #4d2b89 157px 157px, #4d2b89 158px 158px, #4d2b89 159px 159px, #4d2b89 160px 160px, #4d2b89 161px 161px, #4d2b89 162px 162px, #4d2b89 163px 163px, #4d2b89 164px 164px, #4d2b89 165px 165px, #4d2b89 166px 166px, #4d2b89 167px 167px, #4d2b89 168px 168px, #4d2b89 169px 169px, #4d2b89 170px 170px, #4d2b89 171px 171px, #4d2b89 172px 172px, #4d2b89 173px 173px, #4d2b89 174px 174px, #4d2b89 175px 175px, #4d2b89 176px 176px, #4d2b89 177px 177px, #4d2b89 178px 178px, #4d2b89 179px 179px, #4d2b89 180px 180px, #4d2b89 181px 181px, #4d2b89 182px 182px, #4d2b89 183px 183px, #4d2b89 184px 184px, #4d2b89 185px 185px, #4d2b89 186px 186px, #4d2b89 187px 187px, #4d2b89 188px 188px, #4d2b89 189px 189px, #4d2b89 190px 190px, #4d2b89 191px 191px, #4d2b89 192px 192px, #4d2b89 193px 193px, #4d2b89 194px 194px, #4d2b89 195px 195px, #4d2b89 196px 196px, #4d2b89 197px 197px, #4d2b89 198px 198px, #4d2b89 199px 199px, #4d2b89 200px 200px; }
+  .icon-box.hackernews {
+    background-color: #ff9800; }
+    .icon-box.hackernews span {
+      text-shadow: #c27400 1px 1px, #c27400 2px 2px, #c27400 3px 3px, #c27400 4px 4px, #c27400 5px 5px, #c27400 6px 6px, #c27400 7px 7px, #c27400 8px 8px, #c27400 9px 9px, #c27400 10px 10px, #c27400 11px 11px, #c27400 12px 12px, #c27400 13px 13px, #c27400 14px 14px, #c27400 15px 15px, #c27400 16px 16px, #c27400 17px 17px, #c27400 18px 18px, #c27400 19px 19px, #c27400 20px 20px, #c27400 21px 21px, #c27400 22px 22px, #c27400 23px 23px, #c27400 24px 24px, #c27400 25px 25px, #c27400 26px 26px, #c27400 27px 27px, #c27400 28px 28px, #c27400 29px 29px, #c27400 30px 30px, #c27400 31px 31px, #c27400 32px 32px, #c27400 33px 33px, #c27400 34px 34px, #c27400 35px 35px, #c27400 36px 36px, #c27400 37px 37px, #c27400 38px 38px, #c27400 39px 39px, #c27400 40px 40px, #c27400 41px 41px, #c27400 42px 42px, #c27400 43px 43px, #c27400 44px 44px, #c27400 45px 45px, #c27400 46px 46px, #c27400 47px 47px, #c27400 48px 48px, #c27400 49px 49px, #c27400 50px 50px, #c27400 51px 51px, #c27400 52px 52px, #c27400 53px 53px, #c27400 54px 54px, #c27400 55px 55px, #c27400 56px 56px, #c27400 57px 57px, #c27400 58px 58px, #c27400 59px 59px, #c27400 60px 60px, #c27400 61px 61px, #c27400 62px 62px, #c27400 63px 63px, #c27400 64px 64px, #c27400 65px 65px, #c27400 66px 66px, #c27400 67px 67px, #c27400 68px 68px, #c27400 69px 69px, #c27400 70px 70px, #c27400 71px 71px, #c27400 72px 72px, #c27400 73px 73px, #c27400 74px 74px, #c27400 75px 75px, #c27400 76px 76px, #c27400 77px 77px, #c27400 78px 78px, #c27400 79px 79px, #c27400 80px 80px, #c27400 81px 81px, #c27400 82px 82px, #c27400 83px 83px, #c27400 84px 84px, #c27400 85px 85px, #c27400 86px 86px, #c27400 87px 87px, #c27400 88px 88px, #c27400 89px 89px, #c27400 90px 90px, #c27400 91px 91px, #c27400 92px 92px, #c27400 93px 93px, #c27400 94px 94px, #c27400 95px 95px, #c27400 96px 96px, #c27400 97px 97px, #c27400 98px 98px, #c27400 99px 99px, #c27400 100px 100px, #c27400 101px 101px, #c27400 102px 102px, #c27400 103px 103px, #c27400 104px 104px, #c27400 105px 105px, #c27400 106px 106px, #c27400 107px 107px, #c27400 108px 108px, #c27400 109px 109px, #c27400 110px 110px, #c27400 111px 111px, #c27400 112px 112px, #c27400 113px 113px, #c27400 114px 114px, #c27400 115px 115px, #c27400 116px 116px, #c27400 117px 117px, #c27400 118px 118px, #c27400 119px 119px, #c27400 120px 120px, #c27400 121px 121px, #c27400 122px 122px, #c27400 123px 123px, #c27400 124px 124px, #c27400 125px 125px, #c27400 126px 126px, #c27400 127px 127px, #c27400 128px 128px, #c27400 129px 129px, #c27400 130px 130px, #c27400 131px 131px, #c27400 132px 132px, #c27400 133px 133px, #c27400 134px 134px, #c27400 135px 135px, #c27400 136px 136px, #c27400 137px 137px, #c27400 138px 138px, #c27400 139px 139px, #c27400 140px 140px, #c27400 141px 141px, #c27400 142px 142px, #c27400 143px 143px, #c27400 144px 144px, #c27400 145px 145px, #c27400 146px 146px, #c27400 147px 147px, #c27400 148px 148px, #c27400 149px 149px, #c27400 150px 150px, #c27400 151px 151px, #c27400 152px 152px, #c27400 153px 153px, #c27400 154px 154px, #c27400 155px 155px, #c27400 156px 156px, #c27400 157px 157px, #c27400 158px 158px, #c27400 159px 159px, #c27400 160px 160px, #c27400 161px 161px, #c27400 162px 162px, #c27400 163px 163px, #c27400 164px 164px, #c27400 165px 165px, #c27400 166px 166px, #c27400 167px 167px, #c27400 168px 168px, #c27400 169px 169px, #c27400 170px 170px, #c27400 171px 171px, #c27400 172px 172px, #c27400 173px 173px, #c27400 174px 174px, #c27400 175px 175px, #c27400 176px 176px, #c27400 177px 177px, #c27400 178px 178px, #c27400 179px 179px, #c27400 180px 180px, #c27400 181px 181px, #c27400 182px 182px, #c27400 183px 183px, #c27400 184px 184px, #c27400 185px 185px, #c27400 186px 186px, #c27400 187px 187px, #c27400 188px 188px, #c27400 189px 189px, #c27400 190px 190px, #c27400 191px 191px, #c27400 192px 192px, #c27400 193px 193px, #c27400 194px 194px, #c27400 195px 195px, #c27400 196px 196px, #c27400 197px 197px, #c27400 198px 198px, #c27400 199px 199px, #c27400 200px 200px; }
+  .icon-box.reddit {
+    background-color: #03a9f4; }
+    .icon-box.reddit span {
+      text-shadow: #027fb8 1px 1px, #027fb8 2px 2px, #027fb8 3px 3px, #027fb8 4px 4px, #027fb8 5px 5px, #027fb8 6px 6px, #027fb8 7px 7px, #027fb8 8px 8px, #027fb8 9px 9px, #027fb8 10px 10px, #027fb8 11px 11px, #027fb8 12px 12px, #027fb8 13px 13px, #027fb8 14px 14px, #027fb8 15px 15px, #027fb8 16px 16px, #027fb8 17px 17px, #027fb8 18px 18px, #027fb8 19px 19px, #027fb8 20px 20px, #027fb8 21px 21px, #027fb8 22px 22px, #027fb8 23px 23px, #027fb8 24px 24px, #027fb8 25px 25px, #027fb8 26px 26px, #027fb8 27px 27px, #027fb8 28px 28px, #027fb8 29px 29px, #027fb8 30px 30px, #027fb8 31px 31px, #027fb8 32px 32px, #027fb8 33px 33px, #027fb8 34px 34px, #027fb8 35px 35px, #027fb8 36px 36px, #027fb8 37px 37px, #027fb8 38px 38px, #027fb8 39px 39px, #027fb8 40px 40px, #027fb8 41px 41px, #027fb8 42px 42px, #027fb8 43px 43px, #027fb8 44px 44px, #027fb8 45px 45px, #027fb8 46px 46px, #027fb8 47px 47px, #027fb8 48px 48px, #027fb8 49px 49px, #027fb8 50px 50px, #027fb8 51px 51px, #027fb8 52px 52px, #027fb8 53px 53px, #027fb8 54px 54px, #027fb8 55px 55px, #027fb8 56px 56px, #027fb8 57px 57px, #027fb8 58px 58px, #027fb8 59px 59px, #027fb8 60px 60px, #027fb8 61px 61px, #027fb8 62px 62px, #027fb8 63px 63px, #027fb8 64px 64px, #027fb8 65px 65px, #027fb8 66px 66px, #027fb8 67px 67px, #027fb8 68px 68px, #027fb8 69px 69px, #027fb8 70px 70px, #027fb8 71px 71px, #027fb8 72px 72px, #027fb8 73px 73px, #027fb8 74px 74px, #027fb8 75px 75px, #027fb8 76px 76px, #027fb8 77px 77px, #027fb8 78px 78px, #027fb8 79px 79px, #027fb8 80px 80px, #027fb8 81px 81px, #027fb8 82px 82px, #027fb8 83px 83px, #027fb8 84px 84px, #027fb8 85px 85px, #027fb8 86px 86px, #027fb8 87px 87px, #027fb8 88px 88px, #027fb8 89px 89px, #027fb8 90px 90px, #027fb8 91px 91px, #027fb8 92px 92px, #027fb8 93px 93px, #027fb8 94px 94px, #027fb8 95px 95px, #027fb8 96px 96px, #027fb8 97px 97px, #027fb8 98px 98px, #027fb8 99px 99px, #027fb8 100px 100px, #027fb8 101px 101px, #027fb8 102px 102px, #027fb8 103px 103px, #027fb8 104px 104px, #027fb8 105px 105px, #027fb8 106px 106px, #027fb8 107px 107px, #027fb8 108px 108px, #027fb8 109px 109px, #027fb8 110px 110px, #027fb8 111px 111px, #027fb8 112px 112px, #027fb8 113px 113px, #027fb8 114px 114px, #027fb8 115px 115px, #027fb8 116px 116px, #027fb8 117px 117px, #027fb8 118px 118px, #027fb8 119px 119px, #027fb8 120px 120px, #027fb8 121px 121px, #027fb8 122px 122px, #027fb8 123px 123px, #027fb8 124px 124px, #027fb8 125px 125px, #027fb8 126px 126px, #027fb8 127px 127px, #027fb8 128px 128px, #027fb8 129px 129px, #027fb8 130px 130px, #027fb8 131px 131px, #027fb8 132px 132px, #027fb8 133px 133px, #027fb8 134px 134px, #027fb8 135px 135px, #027fb8 136px 136px, #027fb8 137px 137px, #027fb8 138px 138px, #027fb8 139px 139px, #027fb8 140px 140px, #027fb8 141px 141px, #027fb8 142px 142px, #027fb8 143px 143px, #027fb8 144px 144px, #027fb8 145px 145px, #027fb8 146px 146px, #027fb8 147px 147px, #027fb8 148px 148px, #027fb8 149px 149px, #027fb8 150px 150px, #027fb8 151px 151px, #027fb8 152px 152px, #027fb8 153px 153px, #027fb8 154px 154px, #027fb8 155px 155px, #027fb8 156px 156px, #027fb8 157px 157px, #027fb8 158px 158px, #027fb8 159px 159px, #027fb8 160px 160px, #027fb8 161px 161px, #027fb8 162px 162px, #027fb8 163px 163px, #027fb8 164px 164px, #027fb8 165px 165px, #027fb8 166px 166px, #027fb8 167px 167px, #027fb8 168px 168px, #027fb8 169px 169px, #027fb8 170px 170px, #027fb8 171px 171px, #027fb8 172px 172px, #027fb8 173px 173px, #027fb8 174px 174px, #027fb8 175px 175px, #027fb8 176px 176px, #027fb8 177px 177px, #027fb8 178px 178px, #027fb8 179px 179px, #027fb8 180px 180px, #027fb8 181px 181px, #027fb8 182px 182px, #027fb8 183px 183px, #027fb8 184px 184px, #027fb8 185px 185px, #027fb8 186px 186px, #027fb8 187px 187px, #027fb8 188px 188px, #027fb8 189px 189px, #027fb8 190px 190px, #027fb8 191px 191px, #027fb8 192px 192px, #027fb8 193px 193px, #027fb8 194px 194px, #027fb8 195px 195px, #027fb8 196px 196px, #027fb8 197px 197px, #027fb8 198px 198px, #027fb8 199px 199px, #027fb8 200px 200px; }
+  .icon-box.youtube {
+    background-color: #f44336; }
+    .icon-box.youtube span {
+      text-shadow: #e11b0c 1px 1px, #e11b0c 2px 2px, #e11b0c 3px 3px, #e11b0c 4px 4px, #e11b0c 5px 5px, #e11b0c 6px 6px, #e11b0c 7px 7px, #e11b0c 8px 8px, #e11b0c 9px 9px, #e11b0c 10px 10px, #e11b0c 11px 11px, #e11b0c 12px 12px, #e11b0c 13px 13px, #e11b0c 14px 14px, #e11b0c 15px 15px, #e11b0c 16px 16px, #e11b0c 17px 17px, #e11b0c 18px 18px, #e11b0c 19px 19px, #e11b0c 20px 20px, #e11b0c 21px 21px, #e11b0c 22px 22px, #e11b0c 23px 23px, #e11b0c 24px 24px, #e11b0c 25px 25px, #e11b0c 26px 26px, #e11b0c 27px 27px, #e11b0c 28px 28px, #e11b0c 29px 29px, #e11b0c 30px 30px, #e11b0c 31px 31px, #e11b0c 32px 32px, #e11b0c 33px 33px, #e11b0c 34px 34px, #e11b0c 35px 35px, #e11b0c 36px 36px, #e11b0c 37px 37px, #e11b0c 38px 38px, #e11b0c 39px 39px, #e11b0c 40px 40px, #e11b0c 41px 41px, #e11b0c 42px 42px, #e11b0c 43px 43px, #e11b0c 44px 44px, #e11b0c 45px 45px, #e11b0c 46px 46px, #e11b0c 47px 47px, #e11b0c 48px 48px, #e11b0c 49px 49px, #e11b0c 50px 50px, #e11b0c 51px 51px, #e11b0c 52px 52px, #e11b0c 53px 53px, #e11b0c 54px 54px, #e11b0c 55px 55px, #e11b0c 56px 56px, #e11b0c 57px 57px, #e11b0c 58px 58px, #e11b0c 59px 59px, #e11b0c 60px 60px, #e11b0c 61px 61px, #e11b0c 62px 62px, #e11b0c 63px 63px, #e11b0c 64px 64px, #e11b0c 65px 65px, #e11b0c 66px 66px, #e11b0c 67px 67px, #e11b0c 68px 68px, #e11b0c 69px 69px, #e11b0c 70px 70px, #e11b0c 71px 71px, #e11b0c 72px 72px, #e11b0c 73px 73px, #e11b0c 74px 74px, #e11b0c 75px 75px, #e11b0c 76px 76px, #e11b0c 77px 77px, #e11b0c 78px 78px, #e11b0c 79px 79px, #e11b0c 80px 80px, #e11b0c 81px 81px, #e11b0c 82px 82px, #e11b0c 83px 83px, #e11b0c 84px 84px, #e11b0c 85px 85px, #e11b0c 86px 86px, #e11b0c 87px 87px, #e11b0c 88px 88px, #e11b0c 89px 89px, #e11b0c 90px 90px, #e11b0c 91px 91px, #e11b0c 92px 92px, #e11b0c 93px 93px, #e11b0c 94px 94px, #e11b0c 95px 95px, #e11b0c 96px 96px, #e11b0c 97px 97px, #e11b0c 98px 98px, #e11b0c 99px 99px, #e11b0c 100px 100px, #e11b0c 101px 101px, #e11b0c 102px 102px, #e11b0c 103px 103px, #e11b0c 104px 104px, #e11b0c 105px 105px, #e11b0c 106px 106px, #e11b0c 107px 107px, #e11b0c 108px 108px, #e11b0c 109px 109px, #e11b0c 110px 110px, #e11b0c 111px 111px, #e11b0c 112px 112px, #e11b0c 113px 113px, #e11b0c 114px 114px, #e11b0c 115px 115px, #e11b0c 116px 116px, #e11b0c 117px 117px, #e11b0c 118px 118px, #e11b0c 119px 119px, #e11b0c 120px 120px, #e11b0c 121px 121px, #e11b0c 122px 122px, #e11b0c 123px 123px, #e11b0c 124px 124px, #e11b0c 125px 125px, #e11b0c 126px 126px, #e11b0c 127px 127px, #e11b0c 128px 128px, #e11b0c 129px 129px, #e11b0c 130px 130px, #e11b0c 131px 131px, #e11b0c 132px 132px, #e11b0c 133px 133px, #e11b0c 134px 134px, #e11b0c 135px 135px, #e11b0c 136px 136px, #e11b0c 137px 137px, #e11b0c 138px 138px, #e11b0c 139px 139px, #e11b0c 140px 140px, #e11b0c 141px 141px, #e11b0c 142px 142px, #e11b0c 143px 143px, #e11b0c 144px 144px, #e11b0c 145px 145px, #e11b0c 146px 146px, #e11b0c 147px 147px, #e11b0c 148px 148px, #e11b0c 149px 149px, #e11b0c 150px 150px, #e11b0c 151px 151px, #e11b0c 152px 152px, #e11b0c 153px 153px, #e11b0c 154px 154px, #e11b0c 155px 155px, #e11b0c 156px 156px, #e11b0c 157px 157px, #e11b0c 158px 158px, #e11b0c 159px 159px, #e11b0c 160px 160px, #e11b0c 161px 161px, #e11b0c 162px 162px, #e11b0c 163px 163px, #e11b0c 164px 164px, #e11b0c 165px 165px, #e11b0c 166px 166px, #e11b0c 167px 167px, #e11b0c 168px 168px, #e11b0c 169px 169px, #e11b0c 170px 170px, #e11b0c 171px 171px, #e11b0c 172px 172px, #e11b0c 173px 173px, #e11b0c 174px 174px, #e11b0c 175px 175px, #e11b0c 176px 176px, #e11b0c 177px 177px, #e11b0c 178px 178px, #e11b0c 179px 179px, #e11b0c 180px 180px, #e11b0c 181px 181px, #e11b0c 182px 182px, #e11b0c 183px 183px, #e11b0c 184px 184px, #e11b0c 185px 185px, #e11b0c 186px 186px, #e11b0c 187px 187px, #e11b0c 188px 188px, #e11b0c 189px 189px, #e11b0c 190px 190px, #e11b0c 191px 191px, #e11b0c 192px 192px, #e11b0c 193px 193px, #e11b0c 194px 194px, #e11b0c 195px 195px, #e11b0c 196px 196px, #e11b0c 197px 197px, #e11b0c 198px 198px, #e11b0c 199px 199px, #e11b0c 200px 200px; }
+  .icon-box span {
+    display: block;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    color: #fff;
+    text-shadow: #008270 1px 1px, #008270 2px 2px, #008270 3px 3px, #008270 4px 4px, #008270 5px 5px, #008270 6px 6px, #008270 7px 7px, #008270 8px 8px, #008270 9px 9px, #008270 10px 10px, #008270 11px 11px, #008270 12px 12px, #008270 13px 13px, #008270 14px 14px, #008270 15px 15px, #008270 16px 16px, #008270 17px 17px, #008270 18px 18px, #008270 19px 19px, #008270 20px 20px, #008270 21px 21px, #008270 22px 22px, #008270 23px 23px, #008270 24px 24px, #008270 25px 25px, #008270 26px 26px, #008270 27px 27px, #008270 28px 28px, #008270 29px 29px, #008270 30px 30px, #008270 31px 31px, #008270 32px 32px, #008270 33px 33px, #008270 34px 34px, #008270 35px 35px, #008270 36px 36px, #008270 37px 37px, #008270 38px 38px, #008270 39px 39px, #008270 40px 40px, #008270 41px 41px, #008270 42px 42px, #008270 43px 43px, #008270 44px 44px, #008270 45px 45px, #008270 46px 46px, #008270 47px 47px, #008270 48px 48px, #008270 49px 49px, #008270 50px 50px, #008270 51px 51px, #008270 52px 52px, #008270 53px 53px, #008270 54px 54px, #008270 55px 55px, #008270 56px 56px, #008270 57px 57px, #008270 58px 58px, #008270 59px 59px, #008270 60px 60px, #008270 61px 61px, #008270 62px 62px, #008270 63px 63px, #008270 64px 64px, #008270 65px 65px, #008270 66px 66px, #008270 67px 67px, #008270 68px 68px, #008270 69px 69px, #008270 70px 70px, #008270 71px 71px, #008270 72px 72px, #008270 73px 73px, #008270 74px 74px, #008270 75px 75px, #008270 76px 76px, #008270 77px 77px, #008270 78px 78px, #008270 79px 79px, #008270 80px 80px, #008270 81px 81px, #008270 82px 82px, #008270 83px 83px, #008270 84px 84px, #008270 85px 85px, #008270 86px 86px, #008270 87px 87px, #008270 88px 88px, #008270 89px 89px, #008270 90px 90px, #008270 91px 91px, #008270 92px 92px, #008270 93px 93px, #008270 94px 94px, #008270 95px 95px, #008270 96px 96px, #008270 97px 97px, #008270 98px 98px, #008270 99px 99px, #008270 100px 100px, #008270 101px 101px, #008270 102px 102px, #008270 103px 103px, #008270 104px 104px, #008270 105px 105px, #008270 106px 106px, #008270 107px 107px, #008270 108px 108px, #008270 109px 109px, #008270 110px 110px, #008270 111px 111px, #008270 112px 112px, #008270 113px 113px, #008270 114px 114px, #008270 115px 115px, #008270 116px 116px, #008270 117px 117px, #008270 118px 118px, #008270 119px 119px, #008270 120px 120px, #008270 121px 121px, #008270 122px 122px, #008270 123px 123px, #008270 124px 124px, #008270 125px 125px, #008270 126px 126px, #008270 127px 127px, #008270 128px 128px, #008270 129px 129px, #008270 130px 130px, #008270 131px 131px, #008270 132px 132px, #008270 133px 133px, #008270 134px 134px, #008270 135px 135px, #008270 136px 136px, #008270 137px 137px, #008270 138px 138px, #008270 139px 139px, #008270 140px 140px, #008270 141px 141px, #008270 142px 142px, #008270 143px 143px, #008270 144px 144px, #008270 145px 145px, #008270 146px 146px, #008270 147px 147px, #008270 148px 148px, #008270 149px 149px, #008270 150px 150px, #008270 151px 151px, #008270 152px 152px, #008270 153px 153px, #008270 154px 154px, #008270 155px 155px, #008270 156px 156px, #008270 157px 157px, #008270 158px 158px, #008270 159px 159px, #008270 160px 160px, #008270 161px 161px, #008270 162px 162px, #008270 163px 163px, #008270 164px 164px, #008270 165px 165px, #008270 166px 166px, #008270 167px 167px, #008270 168px 168px, #008270 169px 169px, #008270 170px 170px, #008270 171px 171px, #008270 172px 172px, #008270 173px 173px, #008270 174px 174px, #008270 175px 175px, #008270 176px 176px, #008270 177px 177px, #008270 178px 178px, #008270 179px 179px, #008270 180px 180px, #008270 181px 181px, #008270 182px 182px, #008270 183px 183px, #008270 184px 184px, #008270 185px 185px, #008270 186px 186px, #008270 187px 187px, #008270 188px 188px, #008270 189px 189px, #008270 190px 190px, #008270 191px 191px, #008270 192px 192px, #008270 193px 193px, #008270 194px 194px, #008270 195px 195px, #008270 196px 196px, #008270 197px 197px, #008270 198px 198px, #008270 199px 199px, #008270 200px 200px; }
+
+html {
+  height: 100%; }
 
 body {
-  background-color: #424F5A; }
+  background-color: #424F5A;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center; }
+
+a:hover, a:active, a:focus {
+  outline: none; }
 
 .container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto; }
-  .container::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .container ul.buttons {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-    .container ul.buttons li {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 23.23176%; }
-      .container ul.buttons li:last-child {
-        margin-right: 0; }
-      .container ul.buttons li img {
-        width: 100%; }
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center; }
+  .container ul {
+    margin: 0;
+    padding: 0; }
+    .container ul li {
+      display: inline-block;
+      margin: 20px;
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      box-flex: 1;
+      -webkit-flex: 1;
+      -moz-flex: 1;
+      -ms-flex: 1;
+      flex: 1; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,81 @@
+@import "bourbon/bourbon";
+@import "font-awesome/font-awesome";
+@import "custom-mixins";
+
+/* -- Variables -- */
+$icolor: #fff;      /* icon color       */
+$bcolor: #00bfa5;   /* background color */
+$scolor: darken($bcolor,12%);   /* shadow color     */
+$bradius: 200;       /* bg border radius */
+$length: 200;       /* box length       */
+
+/* -- icon colors --
+ * https://www.google.com/design/spec/style/color.html#color-color-palette */
+$bg-facebook: #3f51b5;
+$bg-github: #673ab7;
+$bg-hackernews: #ff9800;
+$bg-reddit: #03a9f4;
+$bg-youtube: #f44336;
+
+.icon-box {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  width: $length+px;
+  height: $length+px;
+	&:hover {@include transform(scale(0.95))};
+  font-size: $length/2+px;
+  line-height: $length+px;
+  background-color: $bcolor;
+  @include border-radius ($bradius);
+
+  /* icon colors */
+  &.facebook{background-color: $bg-facebook;span{@include long-shadow(darken($bg-facebook,12%),$length)}}
+  &.github{background-color: $bg-github;span{@include long-shadow(darken($bg-github,12%),$length)}}
+  &.hackernews{background-color: $bg-hackernews;span{@include long-shadow(darken($bg-hackernews,12%),$length)}}
+  &.reddit{background-color: $bg-reddit;span{@include long-shadow(darken($bg-reddit,12%),$length)}}
+  &.youtube{background-color: $bg-youtube;span{@include long-shadow(darken($bg-youtube,12%),$length)}}
+  
+  span {
+		display: block;
+		position: absolute;
+		height: $length+px;
+		width: $length+px;
+		color: $icolor;
+		@include long-shadow ($scolor, $length);
+	}
+}
+
+html {
+  height: 100%;
+}
+
+body {
+	background-color:#424F5A;
+	margin:0;padding:0;
+	height:100%;
+  @include display(flex);
+  @include align-items(center);
+}
+
+a {
+	&:hover, &:active, &:focus {
+    outline: none;
+  }
+}
+
+.container {
+	@include flex(1);
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(space-between);
+  @include align-items(center);
+	ul {
+	  margin:0;padding:0;
+			li {
+				display: inline-block;
+				margin: 20px;
+				@include flex(1);
+			}
+	}
+}
